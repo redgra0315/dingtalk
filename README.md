@@ -22,20 +22,20 @@
     ![Xnip2020-07-05_15-55-24.jpg](https://i.loli.net/2020/07/05/4XqHG2dOwo8StEu.jpg)
 3. 选择`自定义关键词`，这里设置的关键词在初始化机器人的时候会用到。
 ### 获取
--   ```go
-    go get github.com/blinkbean/dingtalk
+-   ```go 
+    go get github.com/redgra0315/dingtalk
     ```
 ### 初始化
 -   ```go
     // key 创建钉钉机器人需要设置的关键词，默认为`.`
-    func InitDingTalk(tokens []string, key string) *dingTalk
+	func InitDingTalk(tokens []string, key string) *dingTalk
     
     // 加签方式创建钉钉机器人
     // 加签机器人 access_token和secret一一对应，在创建机器人是获取
     func InitDingTalkWithSecret(tokens string, secret string) *DingTalk
     ```
 -   ```go
-    import "github.com/blinkbean/dingtalk"
+    import "github.com/redgra0315/dingtalk"
     
     func main() {
         // 单个机器人有单位时间内消息条数的限制，如果有需要可以初始化多个token，发消息时随机发给其中一个机器人。
@@ -51,7 +51,7 @@
 
 - 配置步骤
  1. 创建钉钉群机器人时选中 `是否开启Outgoing机制`。
- 2. 配置POST地址，外网是可访问的接口地址，如：`http://robot.blinkbean.com/outgoing` 。
+ 2. 配置POST地址，外网是可访问的接口地址，如：`http://robot.redgra0315.com/outgoing` 。
  3. 当前未做Token相关逻辑，填写内容不影响测试和使用。
  ![OutGoing.jpg](https://i.loli.net/2021/09/05/XgHph96ZFv3NdST.jpg)
 - 钉钉发送的消息格式
@@ -63,7 +63,7 @@
             }],
         "chatbotUserId":"$:LWCP_v1:$1hbmLCHncx0lCt3Bb/UVz7x/8vh*",
         "conversationId":"cidkkCwvtlh1L0RmFuhmashi*==",
-        "conversationTitle":"Blinkbean",
+        "conversationTitle":"redgra0315",
         "conversationType":"2",
         "createAt":1295212438950,
         "isAdmin":false,
@@ -72,7 +72,7 @@
         "msgtype":"text",
         "sceneGroupCode":"project",
         "senderId":"$:LWCP_v1:$x4wFOct/DGctv96o4IxxB*==",
-        "senderNick":"blinkbean",
+        "senderNick":"redgra0315",
         "sessionWebhook":"https://oapi.dingtalk.com/robot/sendBySession?session=6d69b333f243db32d42c11sda9de620*",
         "sessionWebhookExpiredTime":1595212438350,
         "text":{
